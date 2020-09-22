@@ -29,22 +29,21 @@ requirements:
      - attrs {{ attrs }} 
      - dill 
      - future
-     - numpy
+     - numpy {{ numpy }}
      - promise
      - protobuf {{ protobuf }}
      - requests {{ requests }}
-     - six
+     - six {{ six }}
      - tensorflow-metadata
-     - termcolor
-     - tqdm
-     - wrapt
+     - termcolor {{ termcolor }}
+     - tqdm {{ tqdm }}
+     - wrapt {{ wrapt }}
      - tensorflow {{ tensorflow }}
 
 about:
   home: https://github.com/tensorflow/datasets
   license: Apache License 2.0
   license_family: APACHE
-  license_file: LICENSE
   summary: "A collection of datasets ready to use with TensorFlow"
   description: |
       tensorflow-datasets is a library of public datasets ready to use with
