@@ -38,7 +38,7 @@ requirements:
      - termcolor {{ termcolor }}
      - tqdm {{ tqdm }}
      - wrapt {{ wrapt }}
-     - tensorflow {{ tensorflow }}
+     - tensorflow-base {{ tensorflow }}
 
 about:
   home: https://github.com/tensorflow/datasets
