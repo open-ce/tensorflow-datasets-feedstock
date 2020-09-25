@@ -1,0 +1,59 @@
+{% set version = "3.2.1" %}
+{% set name = "tensorflow-datasets" %}
+{% set sha256 = "b622467b9e8ac0fdff04d07c1f3d551102e930c35d28694bbe23e8c3758ee05b" %}
+
+# This is the recipe for tensorflow-datasets
+package:
+   name: {{ name }}
+   version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 1
+  noarch: python
+  script: python -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+
+requirements:
+  host:
+     - python 
+  build:
+     - git >=2.2 
+  run:
+   # conda build requirements
+     - python 
+     - absl-py {{ absl_py }}
+     - attrs {{ attrs }} 
+     - dill 
+     - future
+     - numpy {{ numpy }}
+     - promise
+     - protobuf {{ protobuf }}
+     - requests {{ requests }}
+     - six {{ six }}
+     - tensorflow-metadata
+     - termcolor {{ termcolor }}
+     - tqdm {{ tqdm }}
+     - wrapt {{ wrapt }}
+     - tensorflow-base {{ tensorflow }}
+
+about:
+  home: https://github.com/tensorflow/datasets
+  license: Apache License 2.0
+  license_family: APACHE
+  summary: "A collection of datasets ready to use with TensorFlow"
+  description: |
+      tensorflow-datasets is a library of public datasets ready to use with
+      TensorFlow. Each dataset definition contains the logic necessary to 
+      download and prepare the dataset, as well as to read it into a model using the
+      `tf.data.Dataset` API.
+      Usage outside of TensorFlow is also supported.
+  dev_url: https://github.com/tensorflow/datasets.git
+  doc_url: https://github.com/tensorflow/datasets.git 
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
