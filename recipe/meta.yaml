@@ -1,4 +1,4 @@
-{% set version = "3.2.1" %}
+{% set version = "4.1.0" %}
 {% set name = "tensorflow-datasets" %}
 {% set sha256 = "b622467b9e8ac0fdff04d07c1f3d551102e930c35d28694bbe23e8c3758ee05b" %}
 
@@ -37,7 +37,9 @@ requirements:
      - tensorflow-metadata
      - termcolor {{ termcolor }}
      - tqdm {{ tqdm }}
-     - wrapt {{ wrapt }}
+     - dataclasses {{ dataclasses }}                    #[py<37]
+     - typing_extensions {{ typing_extensions }}        #[py<38]
+     - importlib_resources {{ importlib_resources }}    #[py<39]
      - tensorflow-base {{ tensorflow }}
 
 about:
