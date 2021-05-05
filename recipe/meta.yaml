@@ -13,8 +13,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
-  string: py_{{ PKG_BUILDNUM }}
+  number: 4
+  string: py_pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
   noarch: python
   script: python -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
