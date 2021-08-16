@@ -39,8 +39,7 @@ requirements:
      - tqdm {{ tqdm }}
      - dataclasses {{ dataclasses }}                    #[py<37]
      - typing_extensions {{ typing_extensions }}        #[py<38]
-       # temporary fix for 1.3 and py39
-     - importlib_resources 3.3.*  #[py<39]
+     - importlib_resources {{ importlib_resources }}    #[py<39]
      - tensorflow-base {{ tensorflow }}
 
 about:
