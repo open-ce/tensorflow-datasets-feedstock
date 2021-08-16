@@ -1,6 +1,5 @@
-{% set version = "4.3.0" %}
+{% set version = "4.4.0" %}
 {% set name = "tensorflow-datasets" %}
-{% set sha256 = "476f8c45354db62ece48aa12e7f73152ca077c5a5ee8a42980faeb8445fb6e26" %}
 
 # This is the recipe for tensorflow-datasets
 package:
@@ -8,14 +7,12 @@ package:
    version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  git_url: https://github.com/tensorflow/datasets
+  git_rev: v{{ version }}
 
 build:
   number: 1
-  string: py_pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
-  noarch: python
+  string: h{{ PKG_HASH }}_py{{ python | replace(".", "") }}_pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
   script: python -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
