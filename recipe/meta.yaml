@@ -14,7 +14,7 @@ source:
 
 build:
   number: 2
-  string: py{{ python | replace(".", "") }}h{{PKG_HASH}}__pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
+  string: pyh{{PKG_HASH}}_pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
   script: python -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
