@@ -38,7 +38,6 @@ requirements:
      - tensorflow-metadata
      - termcolor {{ termcolor }}
      - tqdm {{ tqdm }}
-     - dataclasses {{ dataclasses }}                    #[py<37]
      - typing_extensions {{ typing_extensions }}        #[py<38]
      - importlib_resources {{ importlib_resources }}    #[py<39]
      - tensorflow-base {{ tensorflow }}
