@@ -1,6 +1,6 @@
-{% set version = "4.4.0" %}
+{% set version = "4.6.0" %}
 {% set name = "tensorflow-datasets" %}
-{% set sha256 = "3e95a61dec1fdb7b05dabc0dbed1b531e13d6c6fd362411423d0a775e5e9b960" %}
+{% set sha256 = "9da2a65297e981f61c5f1cb45696066b9c4013d97803a6df74382bc24e2137cb" %}
 
 # This is the recipe for tensorflow-datasets
 package:
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 1
   noarch: python
   string: pyh{{ PKG_HASH }}_pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
   script: python -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
@@ -28,8 +28,8 @@ requirements:
      - python 
      - absl-py {{ absl_py }}
      - attrs {{ attrs }} 
+     #- etil  TODO: Add recipe for this
      - dill 
-     - future
      - numpy {{ numpy }}
      - promise
      - protobuf {{ protobuf }}
@@ -37,8 +37,8 @@ requirements:
      - six {{ six }}
      - tensorflow-metadata
      - termcolor {{ termcolor }}
+     - toml
      - tqdm {{ tqdm }}
-     - dataclasses {{ dataclasses }}                    #[py<37]
      - typing_extensions {{ typing_extensions }}        #[py<38]
      - importlib_resources {{ importlib_resources }}    #[py<39]
      - tensorflow-base {{ tensorflow }}
