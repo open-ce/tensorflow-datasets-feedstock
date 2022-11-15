@@ -8,15 +8,14 @@ package:
    version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://files.pythonhosted.org/packages/bd/5f/a7e7b575db86015ca6155c60e535df75e4145e95eb97bb6abfb69362d38d/tensorflow_datasets-{{ version }}-py3-none-any.whl
+  sha256: 5761da58b35a73746f1e522c7184a41ab0acacb8928a9dde6b2f54f77ad45819
 
 build:
   number: 1
   noarch: python
   string: pyh{{ PKG_HASH }}_pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
-  script: python -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  script: "python -m pip install tensorflow_datasets-{{ version }}*.whl --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
@@ -28,7 +27,7 @@ requirements:
      - python 
      - absl-py {{ absl_py }}
      - attrs {{ attrs }} 
-     #- etil  TODO: Add recipe for this
+     - etils
      - dill 
      - numpy {{ numpy }}
      - promise
