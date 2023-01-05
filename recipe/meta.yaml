@@ -1,6 +1,5 @@
-{% set version = "4.7.0" %}
+{% set version = "4.8.1" %}
 {% set name = "tensorflow-datasets" %}
-{% set sha256 = "590faf3763bc14757906b36c718389eeded533ee8ae4d030ede140db86aca4cd" %}
 
 # This is the recipe for tensorflow-datasets
 package:
@@ -8,8 +7,8 @@ package:
    version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/bd/5f/a7e7b575db86015ca6155c60e535df75e4145e95eb97bb6abfb69362d38d/tensorflow_datasets-{{ version }}-py3-none-any.whl
-  sha256: 5761da58b35a73746f1e522c7184a41ab0acacb8928a9dde6b2f54f77ad45819
+  url: https://files.pythonhosted.org/packages/6a/50/c202d18dafd50d54588391e823d754a761376e200e89dd43149fc8c4f003/tensorflow_datasets-{{ version }}-py3-none-any.whl
+  sha256: e0aae3cfe8eea259a862ad17f655767ede03bbbc8180bb96072fa4e365f1db9f 
 
 build:
   number: 1
