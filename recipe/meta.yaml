@@ -1,4 +1,4 @@
-{% set version = "4.8.1" %}
+{% set version = "4.8.2" %}
 {% set name = "tensorflow-datasets" %}
 
 # This is the recipe for tensorflow-datasets
@@ -37,6 +37,8 @@ requirements:
      - termcolor {{ termcolor }}
      - toml
      - tqdm {{ tqdm }}
+     - wrapt {{ wrapt }}
+     - dm-tree {{ dm_tree }}
      - typing_extensions {{ typing_extensions }}        #[py<38]
      - importlib_resources {{ importlib_resources }}    #[py<39]
      - tensorflow-base {{ tensorflow }}
