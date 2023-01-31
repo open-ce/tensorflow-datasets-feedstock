@@ -1,6 +1,5 @@
-{% set version = "4.7.0" %}
+{% set version = "4.8.2" %}
 {% set name = "tensorflow-datasets" %}
-{% set sha256 = "590faf3763bc14757906b36c718389eeded533ee8ae4d030ede140db86aca4cd" %}
 
 # This is the recipe for tensorflow-datasets
 package:
@@ -8,8 +7,8 @@ package:
    version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/bd/5f/a7e7b575db86015ca6155c60e535df75e4145e95eb97bb6abfb69362d38d/tensorflow_datasets-{{ version }}-py3-none-any.whl
-  sha256: 5761da58b35a73746f1e522c7184a41ab0acacb8928a9dde6b2f54f77ad45819
+  url: https://files.pythonhosted.org/packages/c2/2a/c1aa78b0211b1e3f6439d4edabd44bfb6e1c45544a7a241e3ba5cfe3c316/tensorflow_datasets-{{ version }}-py3-none-any.whl
+  sha256: b11503c0410cb6752f8619c97e5a45c5fee22ff4e164aa1bfefadb401721e2e1 
 
 build:
   number: 1
@@ -38,6 +37,8 @@ requirements:
      - termcolor {{ termcolor }}
      - toml
      - tqdm {{ tqdm }}
+     - wrapt {{ wrapt }}
+     - dm-tree {{ dm_tree }}
      - typing_extensions {{ typing_extensions }}        #[py<38]
      - importlib_resources {{ importlib_resources }}    #[py<39]
      - tensorflow-base {{ tensorflow }}
