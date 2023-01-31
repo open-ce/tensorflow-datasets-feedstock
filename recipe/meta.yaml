@@ -7,7 +7,7 @@ package:
    version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/c2/2a/c1aa78b0211b1e3f6439d4edabd44bfb6e1c45544a7a241e3ba5cfe3c316/tensorflow_datasets-{{ version }}-py3-none-any.whl 
+  url: https://files.pythonhosted.org/packages/c2/2a/c1aa78b0211b1e3f6439d4edabd44bfb6e1c45544a7a241e3ba5cfe3c316/tensorflow_datasets-{{ version }}-py3-none-any.whl
   sha256: b11503c0410cb6752f8619c97e5a45c5fee22ff4e164aa1bfefadb401721e2e1 
 
 build:
