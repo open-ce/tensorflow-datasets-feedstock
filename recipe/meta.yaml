@@ -1,4 +1,4 @@
-{% set version = "4.8.2" %}
+{% set version = "4.8.3" %}
 {% set name = "tensorflow-datasets" %}
 
 # This is the recipe for tensorflow-datasets
@@ -7,8 +7,8 @@ package:
    version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/c2/2a/c1aa78b0211b1e3f6439d4edabd44bfb6e1c45544a7a241e3ba5cfe3c316/tensorflow_datasets-{{ version }}-py3-none-any.whl
-  sha256: b11503c0410cb6752f8619c97e5a45c5fee22ff4e164aa1bfefadb401721e2e1 
+  url: https://files.pythonhosted.org/packages/70/d9/1deca2b3feb31b27d54755607e22746c0b09807900b878d7ea44cb5c02d9/tensorflow_datasets-{{ version }}-py3-none-any.whl
+  sha256: 08059aad624742f52e93c25e0c6a74e6481e91cac5675de9cb687059fe348988
 
 build:
   number: 1
