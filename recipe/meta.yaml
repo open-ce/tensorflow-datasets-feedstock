@@ -1,4 +1,4 @@
-{% set version = "4.8.3" %}
+{% set version = "4.9.2" %}
 {% set name = "tensorflow-datasets" %}
 
 # This is the recipe for tensorflow-datasets
@@ -7,8 +7,8 @@ package:
    version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/70/d9/1deca2b3feb31b27d54755607e22746c0b09807900b878d7ea44cb5c02d9/tensorflow_datasets-{{ version }}-py3-none-any.whl
-  sha256: 08059aad624742f52e93c25e0c6a74e6481e91cac5675de9cb687059fe348988
+  url: https://files.pythonhosted.org/packages/62/82/521e36235c7890b067415fa874f5074ff21f1005a189d79fd72b33b39ca1/tensorflow_datasets-{{ version }}-py3-none-any.whl
+  sha256: aa23fdde1c661f2342fd11d9b373599055899a27b79b1d839adc77fc7daaa15a
 
 build:
   number: 1
@@ -25,7 +25,8 @@ requirements:
    # conda build requirements
      - python 
      - absl-py {{ absl_py }}
-     - attrs {{ attrs }} 
+     - attrs {{ attrs }}
+     - array-record {{ array_record }}
      - etils
      - dill 
      - numpy {{ numpy }}
