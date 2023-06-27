@@ -32,6 +32,7 @@ requirements:
      - numpy {{ numpy }}
      - promise
      - protobuf {{ protobuf }}
+     - psutil {{ psutil }}
      - requests {{ requests }}
      - six {{ six }}
      - tensorflow-metadata
