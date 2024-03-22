@@ -11,7 +11,7 @@ source:
   sha256: cbf93bf87531605ea654d702763b9162546775c7aa3247975d502fd921c39e4d
 
 build:
-  number: 1
+  number: 2
   noarch: python
   string: pyh{{ PKG_HASH }}_pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
   script: "python -m pip install tensorflow_datasets-{{ version }}*.whl --no-deps --ignore-installed --no-cache-dir -vvv"
@@ -44,6 +44,10 @@ requirements:
      - typing_extensions {{ typing_extensions }}        #[py<38]
      - importlib_resources {{ importlib_resources }}    #[py<39]
      - tensorflow-base {{ tensorflow }}
+  test:
+    imports:
+      - tensorflow
+      - tensorflow_datasets
 
 about:
   home: https://github.com/tensorflow/datasets
