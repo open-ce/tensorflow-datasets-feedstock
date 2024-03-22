@@ -44,6 +44,10 @@ requirements:
      - typing_extensions {{ typing_extensions }}        #[py<38]
      - importlib_resources {{ importlib_resources }}    #[py<39]
      - tensorflow-base {{ tensorflow }}
+  test:
+    imports:
+      - tensorflow
+      - tensorflow_datasets
 
 about:
   home: https://github.com/tensorflow/datasets
