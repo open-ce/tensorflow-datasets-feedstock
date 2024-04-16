@@ -36,6 +36,7 @@ requirements:
      - requests {{ requests }}
      - six {{ six }}
      - tensorflow-metadata
+     - termcolor
      - toml
      - tqdm {{ tqdm }}
      - wrapt {{ wrapt }}
