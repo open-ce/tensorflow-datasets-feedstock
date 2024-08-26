@@ -19,6 +19,7 @@ build:
 requirements:
   host:
      - python 
+     - pip {{ pip }}
   build:
      - git >=2.2 
   run:
